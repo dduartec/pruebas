@@ -27,7 +27,7 @@ class App extends Component {
           </a>
         </header>
         <GoogleLogin
-          clientId="373142330185-42b4kl7puvbrkfrkjjgs8c16frev0hia.apps.googleusercontent.com"
+          clientId="373142330185-sv6n2fga4rjtqbjre1cr8hlcj7md8u8h.apps.googleusercontent.com"
           buttonText="Login"
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
