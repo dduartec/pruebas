@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { GoogleLogin } from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
 
 class App extends Component {
 
-  
+
   render() {
     const responseGoogle = (response) => {
+      console.log(response);
+    }
+    const responseFacebook = (response) => {
       console.log(response);
     }
     return (
@@ -31,6 +35,14 @@ class App extends Component {
           buttonText="Login"
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
+        />
+        <FacebookLogin
+          appId="337250857041345"
+          autoLoad={true}
+          fields="name,email,picture"
+          callback={responseFacebook}
+          cssClass="my-facebook-button-class"
+          icon="fa-facebook"
         />
       </div>
 
